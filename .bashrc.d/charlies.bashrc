@@ -18,14 +18,16 @@ alias df='df -h'
 alias ls='ls -a'
 
 ## CD aliases
-alias cdd='cd /opt/docker'
-alias cddocker='cd /opt/docker'
-alias cds='cd /opt/docker'
-alias cdserver='cd /opt/docker'
+alias cdh='cd /home/charlie/'
 
-alias cdaccess='cd /opt/docker/access'
-alias cdapps='cd /opt/docker/apps'
-alias cdmaintain='cd /opt/docker/maintain'
+alias cdd='cd /opt/docker/'
+alias cddocker='cd /opt/docker/'
+alias cds='cd /opt/docker/'
+alias cdserver='cd /opt/docker/'
+
+alias cdaccess='cd /opt/docker/access/'
+alias cdapps='cd /opt/docker/apps/'
+alias cdmaintain='cd /opt/docker/maintain/'
 
 ## Docker aliases
 alias d='docker'
