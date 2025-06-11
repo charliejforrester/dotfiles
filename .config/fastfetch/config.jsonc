@@ -6,19 +6,13 @@
   },
   "modules": [
     "title",
-    {
-      "type": "localip",
-      "key": " "
-    },
     "separator",
     "os",
     "kernel",
-    "packages",
     "uptime",
     "break",
     "cpuusage",
     "memory",
-    "swap",
     "disk"
   ]
 }
