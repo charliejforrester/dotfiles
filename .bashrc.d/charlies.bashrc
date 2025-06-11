@@ -10,7 +10,7 @@ export EDITOR
 export HISTFILESIZE=100
 shopt -s histappend
 
-## Set umask
+## umask
 umask 002
 
 ## Prevent accidental overwrites
