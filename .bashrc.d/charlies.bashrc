@@ -1,4 +1,4 @@
-# Charlie's .bashrc - part of dotfiles repo
+# charlies.bashrc - part of dotfiles repo
 
 # Preferences
 
