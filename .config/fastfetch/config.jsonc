@@ -10,8 +10,8 @@
     "os",
     "kernel",
     "uptime",
-    "break",
     "cpuusage",
+    "loadavg",
     "memory",
     "disk"
   ]
