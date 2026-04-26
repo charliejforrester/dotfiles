@@ -1,0 +1,16 @@
+# docker.rc
+
+# Docker
+alias docker='sudo docker '
+alias d='docker'
+alias di='docker images'
+alias dps='docker ps -a'
+alias dex='docker exec -it'
+
+# Compose
+alias docker-compose='docker compose'
+alias dc='docker compose'
+alias dcup='docker compose up -d'
+alias dcdn='docker compose down'
+alias dcrs='docker compose down && docker compose up -d'
+alias dclg='docker compose logs'

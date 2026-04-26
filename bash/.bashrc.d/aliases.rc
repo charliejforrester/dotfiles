@@ -1,0 +1,14 @@
+# aliases.rc
+
+alias ll='ls -la'
+
+alias ..='cd ..'
+alias ...='cd ../..' 
+
+alias ~='cd ~'
+alias cdh='cd ~'
+
+alias cdservices='cd /opt/services'
+alias cdaccess='cd /opt/services/access'
+alias cdapps='cd /opt/services/apps'
+alias cdmaintain='cd /opt/services/maintain'

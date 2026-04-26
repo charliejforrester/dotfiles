@@ -1,0 +1,33 @@
+# dotfiles.rc
+
+DOTFILES_DIR="$HOME/.dotfiles"
+
+# Check DOTFILES_DIR exists
+_dotfiles-check() {
+  [[ -d "$DOTFILES_DIR" ]] || { echo "dotfiles dir not found: $DOTFILES_DIR"; return 1; }
+}
+
+# Stow command
+_dotfiles-stow-cmd() {
+  find "$DOTFILES_DIR" -maxdepth 1 -mindepth 1 -type d -printf '%f\0' \
+  | xargs -0 stow -d "$DOTFILES_DIR" -t "$HOME" "$@"
+}
+
+# Pull and Stow
+dotfiles-update() {
+  _dotfiles-check || return
+  git -C "$DOTFILES_DIR" pull --rebase &&
+  _dotfiles-stow-cmd -R
+}
+
+# Stow
+dotfiles-stow() { _dotfiles-check || return; _dotfiles-stow-cmd -R; }
+
+# Unstow
+dotfiles-unstow() { _dotfiles-check || return; _dotfiles-stow-cmd -D; }
+
+# Status
+dotfiles-status() {
+  _dotfiles-check || return
+  git -C "$DOTFILES_DIR" status
+}

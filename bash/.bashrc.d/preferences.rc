@@ -1,0 +1,27 @@
+# preferences.rc
+
+# Set nano as default editor
+EDITOR=/usr/bin/nano
+export EDITOR
+
+# Set max length of histroy file
+export HISTFILESIZE=50
+
+# Append to history file
+shopt -s histappend
+
+# Prevent accidental overwrites when using IO redirection
+set -o noclobber
+
+# Run fastfetch if installed
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
+
+# cd into /opt/services if on openSUSE MicroOS
+if [ -f /etc/os-release ]; then
+  source /etc/os-release
+  if [[ "$ID" == "opensuse-microos" || "$ID_LIKE" == *"microos"* ]] && [ -d /opt/services ]; then
+    cd /opt/services
+  fi
+fi
